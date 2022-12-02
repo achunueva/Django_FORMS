@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+  {% for i in object_list %}
+        <div>
+            <h3 >{{i.title}}</h3>
+            <p >{{i.text}}</p>
+            <div >
+                <div>
+                    <a  href="/text/{{i.id}}/update/">Edit</a>
+                    <a  href="/text/{{i.id}}/delete/">Delete</a>
+                </div>
+                <p >{{i.date_note}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    <a href="{% url 'add' %}">add</a>
+</center>
+</body>
+</html>
